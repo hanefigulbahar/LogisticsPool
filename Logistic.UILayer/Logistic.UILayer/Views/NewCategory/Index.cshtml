@@ -1,0 +1,39 @@
+﻿@using Logistic.UILayer.Models
+@model List<TblCategory>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/NewAdminLayout.cshtml";
+}
+@{ 
+    int sayac = 0;
+}
+<h2>Category List</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Category Name</th>
+        <th>Category Status</th>
+        <th>Delete</th>
+        <th>Update</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        sayac++;
+        <tr>
+            <td>@sayac</td>
+            <td>@item.CategoryName</td>
+            @if (item.CategoryStatus == true)
+                {
+                    <td>Active</td>
+                }
+            @if (item.CategoryStatus == false)
+                {
+                    <td>Pasive</td>
+                }
+            <td><a href="/NewCategory/DeleteCategory/@item.CategoryID" class="btn btn-danger">Delete</a></td>
+            <td><a href="/NewCategory/UpdateCategory/@item.CategoryID" class="btn btn-success">Update</a></td>
+        </tr>
+    }
+
+</table>
+<a href="/NewCategory/AddCategory" class="btn btn-primary">Add New Category</a>

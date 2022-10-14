@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBLogisticModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TblCategory">
+    <Key>
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="CategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryName" Type="nvarchar" MaxLength="20" />
+    <Property Name="CategoryStatus" Type="bit" />
+  </EntityType>
+  <EntityType Name="TblCity">
+    <Key>
+      <PropertyRef Name="CityID" />
+    </Key>
+    <Property Name="CityID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CityName" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="TblCustomer">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerName" Type="nvarchar" MaxLength="20" />
+    <Property Name="CustomerSurname" Type="nvarchar" MaxLength="20" />
+    <Property Name="CustomerPhone" Type="nvarchar" MaxLength="20" />
+    <Property Name="CustomerMail" Type="nvarchar" MaxLength="50" />
+    <Property Name="CustomerPassword" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityContainer Name="DBLogisticModelStoreContainer">
+    <EntitySet Name="TblCategory" EntityType="Self.TblCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblCity" EntityType="Self.TblCity" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblCustomer" EntityType="Self.TblCustomer" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

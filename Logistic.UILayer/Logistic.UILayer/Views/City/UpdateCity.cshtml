@@ -1,0 +1,20 @@
+﻿@model Logistic.UILayer.Models.TblCity
+@{
+    ViewBag.Title = "UpdateCity";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<form method="post">
+    <label>City ID</label>
+    <input type="text" name="CityID" class="form-control" value="@Model.CityID"/>
+
+    <br />
+
+    <label>City Name</label>
+    <input type="text" name="CityName" class="form-control" value="@Model.CityName"  />
+    <br/>
+
+    <button class="btn btn-primary">Update City</button>
+
+</form>
+

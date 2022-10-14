@@ -1,0 +1,52 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+
+<!DOCTYPE HTML>
+<html>
+@Html.Partial("PartialHead")
+<body>
+    <h1>Sign Up</h1>
+    <div class="login">
+        <span class="log-close"> </span>
+        <div class="login-bottom">
+            <form method="post">
+                <div class="text">
+                    <input type="text" placeholder="Pleace write name " required="" name="CustomerName" />
+                    <div class="clear"> </div>
+                </div>
+                <div class="text">
+                    <input type="text" placeholder="Please write surname" required="" name="CustomerSurname" />
+                    <div class="clear"> </div>
+                </div>
+                <div class="text">
+                    <input type="text" placeholder="Pleace write phone number " required="" name="CustomerPhone" />
+                    <div class="clear"> </div>
+                </div>
+                <div class="text">
+                    <input type="text" placeholder="Pleace write mail " required="" name="CustomerMail" />
+                    <div class="clear"> </div>
+                </div>
+                <div class="text">
+                    <input type="password" placeholder="Password..." required="" name="CustomerPassword" />
+                    <span class="pass"></span>
+                    <div class="clear"> </div>
+                </div>
+                <div class="remember">
+                    <div class="send">
+                        <input type="submit" value="Sign Up">
+                    </div>
+                    <div class="clear"> </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="copy-right">
+        <p>© @DateTime.Now.Year Creative Account Form. All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">  W3layouts </a></p>
+    </div>
+</body>
+</html>
+
