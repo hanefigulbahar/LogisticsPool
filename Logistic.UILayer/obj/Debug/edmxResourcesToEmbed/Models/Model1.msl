@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBLogisticModelStoreContainer" CdmEntityContainer="DBLogisticEntities">
+    <EntitySetMapping Name="TblCategory">
+      <EntityTypeMapping TypeName="DBLogisticModel.TblCategory">
+        <MappingFragment StoreEntitySet="TblCategory">
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="CategoryStatus" ColumnName="CategoryStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblCustomer">
+      <EntityTypeMapping TypeName="DBLogisticModel.TblCustomer">
+        <MappingFragment StoreEntitySet="TblCustomer">
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="CustomerSurname" ColumnName="CustomerSurname" />
+          <ScalarProperty Name="CustomerPhone" ColumnName="CustomerPhone" />
+          <ScalarProperty Name="CustomerMail" ColumnName="CustomerMail" />
+          <ScalarProperty Name="CustomerPassword" ColumnName="CustomerPassword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblCity">
+      <EntityTypeMapping TypeName="DBLogisticModel.TblCity">
+        <MappingFragment StoreEntitySet="TblCity">
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="CityID" ColumnName="CityID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblOrder">
+      <EntityTypeMapping TypeName="DBLogisticModel.TblOrder">
+        <MappingFragment StoreEntitySet="TblOrder">
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="OrderPrice" ColumnName="OrderPrice" />
+          <ScalarProperty Name="OrderSize" ColumnName="OrderSize" />
+          <ScalarProperty Name="OrderProduct" ColumnName="OrderProduct" />
+          <ScalarProperty Name="ToCity" ColumnName="ToCity" />
+          <ScalarProperty Name="FromCity" ColumnName="FromCity" />
+          <ScalarProperty Name="OrderCustomer" ColumnName="OrderCustomer" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblMessage">
+      <EntityTypeMapping TypeName="DBLogisticModel.TblMessage">
+        <MappingFragment StoreEntitySet="TblMessage">
+          <ScalarProperty Name="ReceiverName" ColumnName="ReceiverName" />
+          <ScalarProperty Name="SenderName" ColumnName="SenderName" />
+          <ScalarProperty Name="MessageDate" ColumnName="MessageDate" />
+          <ScalarProperty Name="MessageContent" ColumnName="MessageContent" />
+          <ScalarProperty Name="MessageSubject" ColumnName="MessageSubject" />
+          <ScalarProperty Name="MessageReceiver" ColumnName="MessageReceiver" />
+          <ScalarProperty Name="MessageSender" ColumnName="MessageSender" />
+          <ScalarProperty Name="MessageID" ColumnName="MessageID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblMap">
+      <EntityTypeMapping TypeName="DBLogisticModel.TblMap">
+        <MappingFragment StoreEntitySet="TblMap">
+          <ScalarProperty Name="MapLocationInfo" ColumnName="MapLocationInfo" />
+          <ScalarProperty Name="MapID" ColumnName="MapID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

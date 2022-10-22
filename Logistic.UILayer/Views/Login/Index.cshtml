@@ -1,0 +1,38 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+
+<!DOCTYPE HTML>
+<html>
+@Html.Partial("/Views/Register/PartialHead.cshtml")
+<body>
+    <h1>Sign Up</h1>
+    <div class="login">
+        <span class="log-close"> </span>
+        <div class="login-bottom">
+            <form method="post">
+                <div class="text">
+                    <input type="text" placeholder="Please write mail " required="" name="CustomerMail" />
+                    <div class="clear"> </div>
+                </div>
+                <div class="text">
+                    <input type="password" placeholder="Password..." required="" name="CustomerPassword" />
+                    <span class="pass"></span>
+                    <div class="clear"> </div>
+                </div>
+                    <div class="send">
+                        <input type="submit" value="Sign in">
+                    </div>
+                    <div class="clear"> </div>
+            </form>
+        </div>
+    </div>
+    <div class="copy-right">
+        <p>© @DateTime.Now.Year Creative Account Form. All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">  W3layouts </a></p>
+    </div>
+</body>
+</html>
+
