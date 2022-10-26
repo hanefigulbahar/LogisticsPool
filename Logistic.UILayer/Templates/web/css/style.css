@@ -29,13 +29,15 @@ nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
 img{max-width:100%;}
 /*end reset*/
 /*--login start here--*/
- body{
+body {
 	font-family: 'Poppins', sans-serif;
-   font-size: 100%;
-   background-color: #C04273; 
+	font-size: 100%;
+	background-color:green;
 }
+
 a {
   text-decoration: none;
+  
 }
 a:hover {
   transition: 0.5s all;
@@ -67,7 +69,7 @@ h1 {
     color: #909090;
 }
 .login h2 a{
-	color: #909090;
+	color: #000;
 	text-decoration:underline;	
 }
 .login h2 a:hover{
@@ -80,8 +82,9 @@ h1 {
 }
 .login-bottom{
 	background:#fff;
-	border-radius: 0px 0px 6px 6px;
-	    padding: 2em;
+	border-radius: 6px 6px 6px 6px;
+	padding: 2em;
+	
 }
 .text{
 	background: #f9f9f9;
@@ -94,7 +97,7 @@ h1 {
 	font-size: 0.95em;
 	padding: 10px 0px 10px 10px;
     width: 83%;
-	color: #A8A8A8;
+	color: #000;
 	outline: none;
 	border:none;
 	background: none;
@@ -105,7 +108,7 @@ h1 {
     height: 16px;
     background: url(../images/man.png) no-repeat;
     margin: 10px 4% 10px 0;
-	    width: 5%;
+	width: 5%;
 }
 .pass{
 	float:right;
@@ -116,7 +119,7 @@ h1 {
 }
  .remember-top a{
     display: block;
-    color: #BBB;
+    color: #000;
     font-size: 0.8em;
     text-decoration: underline;
     font-style: italic;
@@ -173,7 +176,7 @@ span.checkbox1 {
 	opacity: 0;
 	transition: opacity 0.1s;
 	-o-transition: opacity 0.1s;
-	-ms-transition: opacity 0.1s;
+	
 	-moz-transition: opacity 0.1s;
 	-webkit-transition: opacity 0.1s;
 }
@@ -195,18 +198,18 @@ span.checkbox1 {
   border: none;
   padding:7px 20px 7px 20px;
   outline: none;
-  margin-top: 0em;
+  margin-top: 1em;
   border-radius: 4px;
   cursor: pointer;
-   background:#BA3868;
+  background:#BA3868;
 }
-.login input[type="submit"]:hover{
-  background:#F57DA9;
-transition: 0.5s all;
-  -webkit-transition: 0.5s all;
-  -moz-transition: 0.5s all;
-  -o-transition: 0.5s all;
-}
+	.login input[type="submit"]:hover {
+		background: #746C70;
+		transition: 0.5s all;
+		-webkit-transition: 0.5s all;
+		-moz-transition: 0.5s all;
+		-o-transition: 0.5s all;
+	}
 
 .login span.log-close {
   background: url(../images/clo.png)no-repeat;

@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBLogisticModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TblCategory">
+    <Key>
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="CategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryName" Type="nvarchar" MaxLength="20" />
+    <Property Name="CategoryStatus" Type="bit" />
+  </EntityType>
+  <EntityType Name="TblCity">
+    <Key>
+      <PropertyRef Name="CityID" />
+    </Key>
+    <Property Name="CityID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CityName" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="TblCustomer">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerName" Type="nvarchar" MaxLength="20" />
+    <Property Name="CustomerSurname" Type="nvarchar" MaxLength="20" />
+    <Property Name="CustomerPhone" Type="nvarchar" MaxLength="20" />
+    <Property Name="CustomerMail" Type="nvarchar" MaxLength="50" />
+    <Property Name="CustomerPassword" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="TblMap">
+    <Key>
+      <PropertyRef Name="MapID" />
+    </Key>
+    <Property Name="MapID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MapLocationInfo" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="TblMessage">
+    <Key>
+      <PropertyRef Name="MessageID" />
+    </Key>
+    <Property Name="MessageID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MessageSender" Type="nvarchar" MaxLength="50" />
+    <Property Name="MessageReceiver" Type="nvarchar" MaxLength="50" />
+    <Property Name="MessageSubject" Type="nvarchar" MaxLength="50" />
+    <Property Name="MessageContent" Type="nvarchar(max)" />
+    <Property Name="MessageDate" Type="date" />
+    <Property Name="SenderName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReceiverName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TblOrder">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderCustomer" Type="int" />
+    <Property Name="FromCity" Type="int" />
+    <Property Name="ToCity" Type="int" />
+    <Property Name="OrderProduct" Type="nvarchar" MaxLength="50" />
+    <Property Name="OrderSize" Type="nvarchar" MaxLength="20" />
+    <Property Name="OrderPrice" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="OrderDate" Type="smalldatetime" />
+  </EntityType>
+  <Association Name="FK_TblOrder_TblCity3">
+    <End Role="TblCity" Type="Self.TblCity" Multiplicity="0..1" />
+    <End Role="TblOrder" Type="Self.TblOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblCity">
+        <PropertyRef Name="CityID" />
+      </Principal>
+      <Dependent Role="TblOrder">
+        <PropertyRef Name="FromCity" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblOrder_TblCity4">
+    <End Role="TblCity" Type="Self.TblCity" Multiplicity="0..1" />
+    <End Role="TblOrder" Type="Self.TblOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblCity">
+        <PropertyRef Name="CityID" />
+      </Principal>
+      <Dependent Role="TblOrder">
+        <PropertyRef Name="ToCity" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblOrder_TblCustomer">
+    <End Role="TblCustomer" Type="Self.TblCustomer" Multiplicity="0..1" />
+    <End Role="TblOrder" Type="Self.TblOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblCustomer">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="TblOrder">
+        <PropertyRef Name="OrderCustomer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DBLogisticModelStoreContainer">
+    <EntitySet Name="TblCategory" EntityType="Self.TblCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblCity" EntityType="Self.TblCity" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblCustomer" EntityType="Self.TblCustomer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblMap" EntityType="Self.TblMap" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblMessage" EntityType="Self.TblMessage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblOrder" EntityType="Self.TblOrder" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_TblOrder_TblCity3" Association="Self.FK_TblOrder_TblCity3">
+      <End Role="TblCity" EntitySet="TblCity" />
+      <End Role="TblOrder" EntitySet="TblOrder" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblOrder_TblCity4" Association="Self.FK_TblOrder_TblCity4">
+      <End Role="TblCity" EntitySet="TblCity" />
+      <End Role="TblOrder" EntitySet="TblOrder" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblOrder_TblCustomer" Association="Self.FK_TblOrder_TblCustomer">
+      <End Role="TblCustomer" EntitySet="TblCustomer" />
+      <End Role="TblOrder" EntitySet="TblOrder" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

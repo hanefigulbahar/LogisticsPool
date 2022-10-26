@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace Logistic.UILayer.Controllers
 {
+    [AllowAnonymous]
     public class RegisterController : Controller
     {
         DBLogisticEntities db = new DBLogisticEntities();
@@ -21,7 +22,7 @@ namespace Logistic.UILayer.Controllers
         {
             db.TblCustomer.Add(p);
             db.SaveChanges();
-            return View();
+            return RedirectToAction("Index","Login");
         }
         public PartialViewResult PartialHead()
         {

@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBLogisticModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TblCategory">
+    <Key>
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="CategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CategoryStatus" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="TblCustomer">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerSurname" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerPhone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerMail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerPassword" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TblOrder" Relationship="DBLogisticModel.FK_TblOrder_TblCustomer" FromRole="TblCustomer" ToRole="TblOrder" />
+  </EntityType>
+  <EntityContainer Name="DBLogisticEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TblCategory" EntityType="Self.TblCategory" />
+    <EntitySet Name="TblCustomer" EntityType="Self.TblCustomer" />
+    <EntitySet Name="TblCity" EntityType="DBLogisticModel.TblCity" />
+    <EntitySet Name="TblOrder" EntityType="DBLogisticModel.TblOrder" />
+    <AssociationSet Name="FK_TblOrder_TblCity3" Association="DBLogisticModel.FK_TblOrder_TblCity3">
+      <End Role="TblCity" EntitySet="TblCity" />
+      <End Role="TblOrder" EntitySet="TblOrder" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblOrder_TblCity4" Association="DBLogisticModel.FK_TblOrder_TblCity4">
+      <End Role="TblCity" EntitySet="TblCity" />
+      <End Role="TblOrder" EntitySet="TblOrder" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblOrder_TblCustomer" Association="DBLogisticModel.FK_TblOrder_TblCustomer">
+      <End Role="TblCustomer" EntitySet="TblCustomer" />
+      <End Role="TblOrder" EntitySet="TblOrder" />
+    </AssociationSet>
+    <EntitySet Name="TblMessage" EntityType="DBLogisticModel.TblMessage" />
+    <EntitySet Name="TblMap" EntityType="DBLogisticModel.TblMap" />
+  </EntityContainer>
+  <EntityType Name="TblCity">
+    <Key>
+      <PropertyRef Name="CityID" />
+    </Key>
+    <Property Name="CityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CityName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TblOrder" Relationship="DBLogisticModel.FK_TblOrder_TblCity3" FromRole="TblCity" ToRole="TblOrder" />
+    <NavigationProperty Name="TblOrder1" Relationship="DBLogisticModel.FK_TblOrder_TblCity4" FromRole="TblCity" ToRole="TblOrder" />
+  </EntityType>
+  <EntityType Name="TblOrder">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderCustomer" Type="Int32" />
+    <Property Name="FromCity" Type="Int32" />
+    <Property Name="ToCity" Type="Int32" />
+    <Property Name="OrderProduct" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OrderSize" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="OrderPrice" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="OrderDate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="TblCity" Relationship="DBLogisticModel.FK_TblOrder_TblCity3" FromRole="TblOrder" ToRole="TblCity" />
+    <NavigationProperty Name="TblCity1" Relationship="DBLogisticModel.FK_TblOrder_TblCity4" FromRole="TblOrder" ToRole="TblCity" />
+    <NavigationProperty Name="TblCustomer" Relationship="DBLogisticModel.FK_TblOrder_TblCustomer" FromRole="TblOrder" ToRole="TblCustomer" />
+  </EntityType>
+  <Association Name="FK_TblOrder_TblCity3">
+    <End Type="DBLogisticModel.TblCity" Role="TblCity" Multiplicity="0..1" />
+    <End Type="DBLogisticModel.TblOrder" Role="TblOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblCity">
+        <PropertyRef Name="CityID" />
+      </Principal>
+      <Dependent Role="TblOrder">
+        <PropertyRef Name="FromCity" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblOrder_TblCity4">
+    <End Type="DBLogisticModel.TblCity" Role="TblCity" Multiplicity="0..1" />
+    <End Type="DBLogisticModel.TblOrder" Role="TblOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblCity">
+        <PropertyRef Name="CityID" />
+      </Principal>
+      <Dependent Role="TblOrder">
+        <PropertyRef Name="ToCity" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblOrder_TblCustomer">
+    <End Type="DBLogisticModel.TblCustomer" Role="TblCustomer" Multiplicity="0..1" />
+    <End Type="DBLogisticModel.TblOrder" Role="TblOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblCustomer">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="TblOrder">
+        <PropertyRef Name="OrderCustomer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="TblMessage">
+    <Key>
+      <PropertyRef Name="MessageID" />
+    </Key>
+    <Property Name="MessageID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MessageSender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MessageReceiver" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MessageSubject" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MessageContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MessageDate" Type="DateTime" Precision="0" />
+    <Property Name="SenderName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ReceiverName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblMap">
+    <Key>
+      <PropertyRef Name="MapID" />
+    </Key>
+    <Property Name="MapID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MapLocationInfo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

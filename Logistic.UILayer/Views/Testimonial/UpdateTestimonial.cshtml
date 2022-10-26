@@ -1,0 +1,30 @@
+﻿@model Logistic.UILayer.Models.TblTestimonial
+@{
+    ViewBag.Title = "UpdateTestimonial";
+    Layout = "~/Views/Shared/NewAdminLayout.cshtml";
+}
+
+<h2>UpdateTestimonial</h2>
+
+
+<form method="post">
+    <label>Testimonial ID</label>
+    <input type="text" name="TestimonialID" class="form-control" value="@Model.TestimonialID" />
+
+    <br />
+
+    <label>Testimonial Name Surname</label>
+    <input type="text" name="NameSurname" class="form-control" value="@Model.NameSurname" />
+    <br />
+
+    <label>Testimonial Image</label>
+    <input type="text" name="Image" class="form-control" value="@Model.Image" />
+    <br />
+
+    <label>Testimonial Content</label>
+    <input type="text" name="TestimonialContent" class="form-control" value="@Model.TestimonialContent" />
+    <br />
+
+    <button class="btn btn-primary">Update Customer</button>
+
+</form>

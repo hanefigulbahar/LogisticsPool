@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "AddOrder";
+    Layout = "~/Views/Shared/NewAdminLayout.cshtml";
+}
+
+<h2>AddOrder</h2>
+<br />
+
+<form method="post">
+    <label>Customer Name Surname</label>
+    <input type="text" name="OrderCustomer" class="form-control" />
+
+    <label>From City</label>
+    <input type="text" name="FromCity" class="form-control" />
+
+    <label>To City</label>
+    <input type="text" name="ToCity" class="form-control" />
+
+    <label>Order Product</label>
+    <input type="text" name="OrderProduct" class="form-control" />
+
+    <label>Order Size</label>
+    <input type="text" name="OrderSize" class="form-control" />
+
+    <label>Order Price</label>
+    <input type="text" name="OrderPrice" class="form-control" />
+
+    <label>Order Date</label>
+    <input type="text" name="OrderDate" class="form-control" />
+
+    <button class="btn btn-success">Add Order</button>
+</form>

@@ -1,0 +1,31 @@
+﻿@model List<Logistic.UILayer.Models.TblTestimonial>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/NewAdminLayout.cshtml";
+    int sayac = 0;
+}
+
+<h2>Testimonial</h2>
+
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Name Surname</th>
+        <th>Content</th>
+        
+    </tr>
+    @foreach (var item in Model)
+    {
+        sayac = sayac + 1;
+        <tr>
+            <td>@sayac</td>
+            <td>@item.NameSurname</td>
+            <td>@item.TestimonialContent</td>
+            <td><a href="/Testimonial/DeleteTestimonial/@item.TestimonialID" class="btn btn-danger">Delete</a></td>
+            <td><a href="/Testimonial/UpdateTestimonial/@item.TestimonialID" class="btn btn-success">Update</a></td>
+        </tr>
+    }
+
+</table>
+<a href="/Testimonial/AddTestimonial/" class="btn btn-info">Add New Customer</a>

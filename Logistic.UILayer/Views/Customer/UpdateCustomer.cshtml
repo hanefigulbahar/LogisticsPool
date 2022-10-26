@@ -1,0 +1,37 @@
+﻿@model Logistic.UILayer.Models.TblCustomer
+@{
+    ViewBag.Title = "UpdateCustomer";
+    Layout = "~/Views/Shared/NewAdminLayout.cshtml";
+}
+
+<h2>UpdateCustomer</h2>
+
+<form method="post">
+    <label>Customer ID</label>
+    <input type="text" name="CustomerID" class="form-control" value="@Model.CustomerID" />
+
+    <br />
+
+    <label>Customer Name</label>
+    <input type="text" name="CustomerName" class="form-control" value="@Model.CustomerName" />
+    <br />
+
+    <label>Customer Surname</label>
+    <input type="text" name="CustomerSurname" class="form-control" value="@Model.CustomerSurname" />
+    <br />
+
+    <label>Customer Phone</label>
+    <input type="text" name="CustomerPhone" class="form-control" value="@Model.CustomerPhone" />
+    <br />
+
+    <label>Customer Mail</label>
+    <input type="text" name="CustomerMail" class="form-control" value="@Model.CustomerMail" />
+    <br />
+
+    <label>Customer Password</label>
+    <input type="text" name="CustomerPassword" class="form-control" value="@Model.CustomerPassword" />
+    <br />
+
+    <button class="btn btn-primary">Update Customer</button>
+
+</form>

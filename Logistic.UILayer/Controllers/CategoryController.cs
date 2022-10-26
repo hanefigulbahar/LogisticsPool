@@ -27,7 +27,7 @@ namespace Logistic.UILayer.Controllers
         {
             dB.TblCategory.Add(p);
             dB.SaveChanges();
-            return View();
+            return RedirectToAction("Index","NewCategory");
         }
     }
 }

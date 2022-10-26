@@ -1,0 +1,37 @@
+﻿@model Logistic.UILayer.Models.TblOrder
+@{
+    ViewBag.Title = "UpdateOrder";
+    Layout = "~/Views/Shared/NewAdminLayout.cshtml";
+}
+
+<h2>UpdateOrder</h2>
+
+<form method="post">
+
+    <label>Order ID</label>
+    <input type="text" name="OrderID" class="form-control" value="@Model.OrderID" />
+
+    <label>Order Customer</label>
+    <input type="text" name="OrderCustomer" class="form-control" value="@Model.OrderCustomer" />
+
+    <label>From City</label>
+    <input type="text" name="FromCity" class="form-control" value="@Model.FromCity" />
+
+    <label>To City</label>
+    <input type="text" name="ToCity" class="form-control" value="@Model.ToCity" />
+
+    <label>Order Product</label>
+    <input type="text" name="OrderProduct" class="form-control" value="@Model.OrderProduct" />
+
+    <label>Order Size</label>
+    <input type="text" name="OrderSize" class="form-control" value="@Model.OrderSize" />
+
+    <label>Order Price</label>
+    <input type="text" name="OrderPrice" class="form-control" value="@Model.OrderPrice" />
+
+    <label>Order Date</label>
+    <input type="text" name="OrderDate" class="form-control" value="@Model.OrderDate" />
+
+    <button class="btn btn-success">Update Order</button>
+
+</form>

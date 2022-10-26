@@ -1,11 +1,70 @@
 ﻿
+@model Logistic.UILayer.Models.TblCustomer
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/NewAdminLayout.cshtml";
 }
 
-<h2>Profile</h2>
 
-<h3>Welcome: @ViewBag.v1 @ViewBag.v2</h3>
-<h4>Mail address: @ViewBag.v3</h4>
-<h4>Phone Number: @ViewBag.v4</h4>
+
+
+
+
+<div class="container py-5 h-100">
+    <h2>Profile</h2>
+    <div class="row d-flex justify-content-center align-items-center h-100 ">
+        <div class="col col-lg-6 mb-4 mb-lg-0">
+            <div class="card mb-3" style="border-radius: .5rem;">
+                <div class="row g-0">
+                    <div class="col-md-4 gradient-custom text-center text-white"
+                         style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+                        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava6-bg.webp"
+                             alt="Avatar" class="img-fluid my-5" style="width: 80px;" />
+                        <h4> @ViewBag.v1 @ViewBag.v2</h4>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body p-4">
+
+                            <div class="row pt-1">
+                                <div class="col-6 mb-3">
+                                    <h3>Email</h3>
+                                    <p class="text-muted">@ViewBag.v3</p>
+                                </div>
+                                <div class="col-6 mb-3">
+                                    <h3>Phone</h3>
+                                    <p class="text-muted">@ViewBag.v4</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form class="my-1">
+        <label>Order ID</label>
+        <input type="text" name="CustomerID" class="form-control" value="@Model.CustomerID" />
+        <br />
+        <label>Name</label>
+        <input type="text" class="form-control" name="CustomerName" value="@Model.CustomerName" />
+        <br />
+        <label>Surname</label>
+        <input type="text" class="form-control" name="CustomerSurname" value="@Model.CustomerSurname" />
+        <br />
+        <label>Phone</label>
+        <input type="text" class="form-control" name="CustomerPhone" value="@Model.CustomerPhone" />
+
+        <br />
+        <label>Mail</label>
+        <input type="text" class="form-control" name="CustomerMail" value="@Model.CustomerMail" />
+
+        <br />
+        <label>Password</label>
+        <input type="text" class="form-control" name="CustomerPassword" value="@Model.CustomerPassword" />
+        <br />
+
+        <button class="btn btn-success">Update</button>
+    </form>
+
+</div>

@@ -24,17 +24,19 @@ namespace Logistic.UILayer.Controllers
             var values = db.TblCustomer.FirstOrDefault(x => x.CustomerMail == p.CustomerMail && x.CustomerPassword == p.CustomerPassword);
             if (values != null)
             {
-                FormsAuthentication.SetAuthCookie(values.CustomerMail,false);
+                FormsAuthentication.SetAuthCookie(values.CustomerMail, false);
                 Session["CustomerMail"] = values.CustomerMail;
-                return RedirectToAction("Index","Dashboard");
-               
+                return RedirectToAction("Index", "Dashboard");
+
             }
             else
             {
                 return RedirectToAction("Index");
             }
-            
         }
-
+        public PartialViewResult PartialHead()
+        {
+            return PartialView();
+        }
     }
 }

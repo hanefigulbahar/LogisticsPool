@@ -39,6 +39,7 @@
     </AssociationSet>
     <EntitySet Name="TblMessage" EntityType="DBLogisticModel.TblMessage" />
     <EntitySet Name="TblMap" EntityType="DBLogisticModel.TblMap" />
+    <EntitySet Name="TblTestimonial" EntityType="DBLogisticModel.TblTestimonial" />
   </EntityContainer>
   <EntityType Name="TblCity">
     <Key>
@@ -120,5 +121,14 @@
     </Key>
     <Property Name="MapID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="MapLocationInfo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblTestimonial">
+    <Key>
+      <PropertyRef Name="TestimonialID" />
+    </Key>
+    <Property Name="TestimonialID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="TestimonialContent" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>

@@ -9,13 +9,13 @@
 <html>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 <body>
-
-    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+    
+    <canvas id="myChart" style="width:100%;max-width:1000px; margin:auto;"></canvas>
 
     <script>
-        var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
-        var yValues = [55, 49, 44, 24, 15];
-        var barColors = ["red", "green", "blue", "orange", "brown"];
+        var xValues = ["Antalya", "Ankara", "Mersin", "Muş", "Istanbul" ];
+        var yValues = [2, 0, 1, 1, 0];
+        var barColors = ["red", "green", "blue", "orange","grey" ];
 
         new Chart("myChart", {
             type: "bar",
@@ -30,35 +30,40 @@
                 legend: { display: false },
                 title: {
                     display: true,
-                    text: "World Wine Production @DateTime.Now.Year"
+                    text: "Order by cities @DateTime.Now.Year"
                 }
             }
         });
     </script>
 
+    <div class="row" style="margin-top:50px;">
+        <div class="col-lg-3" style="background-color: #E7D2CC; height: 100px;  text-align: center; border-radius: 10px; margin: 0 5px; ">
+            <h4>Number of Category</h4>
+            <h2>@ViewBag.v1</h2>
+
+        </div>
+
+        <div class="col-lg-3" style="background-color: #B9B7BD; height: 100px; text-align: center; align-items: center; border-radius: 10px;  margin: 0 5px; ">
+            <h4>Number of customers</h4>
+            <h2>@ViewBag.v2</h2>
+        </div>
+
+        <div class="col-lg-3" style="background-color: #868B8E; height: 100px; text-align: center; align-items: center; border-radius: 10px; margin: 0 5px; ">
+            <h4>First added category</h4>
+            <h2>@ViewBag.v3</h2>
+        </div>
+
+        <div class="col-lg-2" style="background-color: #647C90; height: 100px; text-align: center; align-items: center; border-radius: 10px; margin: 0 5px; ">
+            <h4>active category</h4>
+            <h2>@ViewBag.v4</h2>
+
+        </div>
+
+    </div>
 </body>
 </html>
 
-<div class="row" style="margin-top:50px">
-    <div class="col-lg-3" style="background-color:#0094ff; height:100px; text-align:center; ">
-        <h4>Kategori Sayısı</h4>
-        <h2>@ViewBag.v1</h2>
-    </div>
-    <div class="col-lg-3" style="background-color:#ff6a00; height:100px; text-align:center; align-items:center">
-        <h4>Müşteri Sayısı</h4>
-        <h2>@ViewBag.v2</h2>
 
-    </div>
-    <div class="col-lg-3" style="background-color:#f12b2b; height:100px; text-align:center; align-items:center">
-        <h4>Son Eklenen Kategori</h4>
-        <h2>@ViewBag.v3</h2>
-    </div>
-    <div class="col-lg-3" style="background-color:#3c319f; height:100px; text-align:center; align-items:center">
-        <h4>Aktif Kategoriler</h4>
-        <h2>@ViewBag.v4</h2>
-
-    </div>
-</div>
 
 
 
