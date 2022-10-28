@@ -34,6 +34,14 @@ namespace Logistic.UILayer.Controllers
                 return RedirectToAction("Index");
             }
         }
+        
+        public ActionResult LogOut()
+        {
+            FormsAuthentication.SignOut();
+            Session.Abandon();
+            return RedirectToAction("Index");
+        }
+
         public PartialViewResult PartialHead()
         {
             return PartialView();

@@ -1,0 +1,27 @@
+﻿@model Logistic.UILayer.Models.TblEmployee
+@{
+    ViewBag.Title = "UpdateEmployee";
+    Layout = "~/Views/Shared/NewAdminLayout.cshtml";
+}
+
+<h2>UpdateEmployee</h2>
+
+<form method="post">
+    <label>Employee ID</label>
+    <input type="text" name="EmployeeID" class="form-control" value="@Model.EmployeeID" />
+
+    <br />
+
+    <label>Employee Name Surname</label>
+    <input type="text" name="EmployeeNameSurname" class="form-control" value="@Model.EmployeeNameSurname" />
+    <br />
+
+    <label>Employee Image</label>
+    <input type="text" name="EmployeeImage" class="form-control" value="@Model.EmployeeImage" />
+    <br />
+
+  
+
+    <button class="btn btn-primary">Update Customer</button>
+
+</form>

@@ -1,0 +1,45 @@
+﻿@model List<Logistic.UILayer.Models.TblEmployee>
+<div class="team" id="team">
+    <div class="container">
+        <div class="heading">
+            <h3>Our Dealers</h3>
+        </div>
+        <div class="wthree_team_grids">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-3 wthree_team_grid">
+                    <div class="hovereffect">
+                        <img src="@item.EmployeeImage" alt=" " class="img-responsive"/>
+                        <div class="overlay">
+                            <h6>Transporters</h6>
+                            <div class="rotate">
+                                <p class="group1">
+                                    <a href="#">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </p>
+                                <hr>
+                                <hr>
+                                <p class="group2">
+                                    <a href="#">
+                                        <i class="fa fa-instagram"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-dribbble"></i>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <h4>@item.EmployeeNameSurname</h4>
+                    <p>Transport Dealer</p>
+                </div>
+
+            }
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>

@@ -38,12 +38,6 @@ namespace Logistic.UILayer.Controllers
             return RedirectToAction("Index");
         }
 
-        [HttpGet]
-        public ActionResult UpdateCustomer(int id)
-        {
-            var values = db.TblCustomer.Find(id);
-            return View(values);
-        }
 
         [HttpPost]
         public ActionResult UpdateCustomer(TblCustomer p)

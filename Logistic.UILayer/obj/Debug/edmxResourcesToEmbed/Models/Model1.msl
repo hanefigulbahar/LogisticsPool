@@ -76,5 +76,14 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="TblEmployee">
+      <EntityTypeMapping TypeName="DBLogisticModel.TblEmployee">
+        <MappingFragment StoreEntitySet="TblEmployee">
+          <ScalarProperty Name="EmployeeImage" ColumnName="EmployeeImage" />
+          <ScalarProperty Name="EmployeeNameSurname" ColumnName="EmployeeNameSurname" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

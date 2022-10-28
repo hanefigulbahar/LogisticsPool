@@ -42,7 +42,7 @@
             </div>
         </div>
     </div>
-    <form class="my-1">
+   @Html.BeginForm("UpdateProfile", "Profile", FormMethod.Post){ 
         <label>Order ID</label>
         <input type="text" name="CustomerID" class="form-control" value="@Model.CustomerID" />
         <br />
@@ -65,6 +65,6 @@
         <br />
 
         <button class="btn btn-success">Update</button>
-    </form>
+    
 
 </div>

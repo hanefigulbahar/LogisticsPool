@@ -31,6 +31,14 @@
           <Property Name="CustomerMail" Type="nvarchar" MaxLength="50" />
           <Property Name="CustomerPassword" Type="nvarchar" MaxLength="20" />
         </EntityType>
+        <EntityType Name="TblEmployee">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="EmployeeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EmployeeNameSurname" Type="nvarchar" MaxLength="50" />
+          <Property Name="EmployeeImage" Type="nvarchar(max)" />
+        </EntityType>
         <EntityType Name="TblMap">
           <Key>
             <PropertyRef Name="MapID" />
@@ -113,6 +121,7 @@
           <EntitySet Name="TblCategory" EntityType="Self.TblCategory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblCity" EntityType="Self.TblCity" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblCustomer" EntityType="Self.TblCustomer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblEmployee" EntityType="Self.TblEmployee" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblMap" EntityType="Self.TblMap" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblMessage" EntityType="Self.TblMessage" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblOrder" EntityType="Self.TblOrder" Schema="dbo" store:Type="Tables" />
@@ -174,6 +183,7 @@
           <EntitySet Name="TblMessage" EntityType="DBLogisticModel.TblMessage" />
           <EntitySet Name="TblMap" EntityType="DBLogisticModel.TblMap" />
           <EntitySet Name="TblTestimonial" EntityType="DBLogisticModel.TblTestimonial" />
+          <EntitySet Name="TblEmployee" EntityType="DBLogisticModel.TblEmployee" />
           </EntityContainer>
         <EntityType Name="TblCity">
           <Key>
@@ -265,6 +275,14 @@
           <Property Name="Image" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="TestimonialContent" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
         </EntityType>
+        <EntityType Name="TblEmployee">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="EmployeeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmployeeNameSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EmployeeImage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -343,6 +361,15 @@
                 <ScalarProperty Name="Image" ColumnName="Image" />
                 <ScalarProperty Name="NameSurname" ColumnName="NameSurname" />
                 <ScalarProperty Name="TestimonialID" ColumnName="TestimonialID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblEmployee">
+            <EntityTypeMapping TypeName="DBLogisticModel.TblEmployee">
+              <MappingFragment StoreEntitySet="TblEmployee">
+                <ScalarProperty Name="EmployeeImage" ColumnName="EmployeeImage" />
+                <ScalarProperty Name="EmployeeNameSurname" ColumnName="EmployeeNameSurname" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

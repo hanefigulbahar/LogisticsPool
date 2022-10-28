@@ -134,6 +134,8 @@
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\EmployeeController.cs" />
+    <Compile Include="Controllers\GalleryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MapController.cs" />
@@ -142,6 +144,7 @@
     <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
+    <Compile Include="Controllers\ServicesController.cs" />
     <Compile Include="Controllers\StatisticController.cs" />
     <Compile Include="Controllers\TestimonialController.cs" />
     <Compile Include="Global.asax.cs">
@@ -169,6 +172,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TblCustomer.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TblEmployee.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TblMap.cs">
@@ -425,8 +431,10 @@
     <Content Include="Templates\web\css\style.css" />
     <Content Include="Templates\web\images\1.png" />
     <Content Include="Templates\web\images\clo.png" />
+    <Content Include="Templates\web\images\mail.png" />
     <Content Include="Templates\web\images\man.png" />
     <Content Include="Templates\web\images\password.png" />
+    <Content Include="Templates\web\images\phone1.png" />
     <Content Include="Templates\web\images\tick.png" />
     <Content Include="Templates\web\index.html" />
     <Content Include="Templates\web\js\jquery-1.11.0.min.js" />
@@ -514,6 +522,23 @@
     <Content Include="Views\Default\PartialScript.cshtml" />
     <Content Include="Views\Order\UpdateOrder.cshtml" />
     <Content Include="Views\Order\AddOrder.cshtml" />
+    <Content Include="Views\Default\PartialModal.cshtml" />
+    <Content Include="Views\Default\PartialBanner.cshtml" />
+    <Content Include="Views\Default\PartialTeam.cshtml" />
+    <Content Include="Views\Default\PartialBlog.cshtml" />
+    <Content Include="Views\Default\PartialFooter.cshtml" />
+    <Content Include="Views\Default\PartialTransport.cshtml" />
+    <Content Include="Views\Employee\Index.cshtml" />
+    <Content Include="Views\Employee\AddEmployee.cshtml" />
+    <Content Include="Views\Employee\UpdateEmployee.cshtml" />
+    <Content Include="Views\Services\Index.cshtml" />
+    <Content Include="Views\Services\PartialBanner.cshtml" />
+    <Content Include="Views\Services\PartialService.cshtml" />
+    <Content Include="Views\Gallery\Index.cshtml" />
+    <Content Include="Views\Gallery\PartialBanner.cshtml" />
+    <Content Include="Views\Gallery\PartialPortfolio.cshtml" />
+    <Content Include="Views\Gallery\PartialScript.cshtml" />
+    <Content Include="Views\Gallery\PartialHead.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

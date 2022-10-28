@@ -1,0 +1,29 @@
+﻿
+<div class="col-md-4 agileinfo">
+    <div class="banner-form-agileinfo">
+        <h5>Need To <span>Transport</span>?</h5>
+        <p>
+            Ut enim ad minima veniam, quis nostrum
+            exerc ullam corporis nisi ut aliqui
+        </p>
+        <form action="#" method="post">
+            <input type="text" class="email" name="Name" placeholder="Name" required="">
+            <input type="tel" class="tel" name="tel" placeholder="Phone Number" required="">
+            <select class="form-control option-w3ls">
+                <option>Transport From</option>
+                @foreach (var item in Model)
+                {
+                    <option>@item.CityName</option>
+                }
+            </select>
+            <select class="form-control option-w3ls">
+                <option>Transport To</option>
+                @foreach (var item in Model)
+                {
+                    <option>@item.CityName</option>
+                }
+            </select>
+            <input type="submit" class="hvr-shutter-in-vertical" value="Get started">
+        </form>
+    </div>
+</div>

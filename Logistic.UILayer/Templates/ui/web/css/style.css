@@ -51,15 +51,16 @@ label{
 .navbar-header h1 img {
     margin-right: 0.3em;
 }
-.navbar-header h1 a {
-    color: #FFF;
-    text-decoration: none;
-    font-size: 33px;
-    display: block;
-    background: #e01f3d;
-    padding:20px;
-    font-weight: 600;
-}
+	.navbar-header h1 a {
+		color: #FFF;
+		text-decoration: none;
+		font-size: 33px;
+		display: block;
+		background: #647C90;
+		padding: 20px;
+		font-weight: 600;
+		border-radius:5px;
+	}
 .navbar-header h1 a span {
     font-size: .3em;
     display: block;
@@ -129,22 +130,22 @@ label{
   position: relative;
   overflow: hidden;
 }
-.hvr-underline-from-center:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  left: 50%;
-  right: 50%;
-  bottom: 0;
-  background:#ff304d;
-  height: 2px;
-  -webkit-transition-property: left, right;
-  transition-property: left, right;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-}
+	.hvr-underline-from-center:before {
+		content: "";
+		position: absolute;
+		z-index: -1;
+		left: 50%;
+		right: 50%;
+		bottom: 0;
+		background: #647C90;
+		height: 2px;
+		-webkit-transition-property: left, right;
+		transition-property: left, right;
+		-webkit-transition-duration: 0.3s;
+		transition-duration: 0.3s;
+		-webkit-transition-timing-function: ease-out;
+		transition-timing-function: ease-out;
+	}
 .hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
   left: 0;
   right: 0;
@@ -230,11 +231,11 @@ label{
     position: relative;
 }
 input.checkbox {
-    background: #ff304d;
-    cursor: pointer;
-    width: 1.2em;
-    height: 1.2em;
-    display: inline-block;
+	background: #647C90;
+	cursor: pointer;
+	width: 1.2em;
+	height: 1.2em;
+	display: inline-block;
 	margin: 0 5px 0 0;
 	vertical-align: text-bottom;
 }
@@ -689,13 +690,13 @@ a.navbar-brand span {
 	min-height:300px;
 }
 .w3ls-button a {
-    color: #ffffff;
-    font-size: 16px;
-    padding: .8em 1em;
-    text-decoration: none;
-    background: #e01f3d;
-    text-align: center;
-    letter-spacing: 1px;
+	color: #ffffff;
+	font-size: 16px;
+	padding: .8em 1em;
+	text-decoration: none;
+	background: #647C90;
+	text-align: center;
+	letter-spacing: 1px;
 }
 /*-- //banner-top --*/ 
 .slider-info {
@@ -802,28 +803,34 @@ button.close {
     color: #23B684;
 }
 .banner-form-agileinfo input[type="submit"] {
-    width: 100%;
-    margin-top: 0px;
-    padding: 12px 0px;
-    font-size: 15px;
-    color: #fff;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    border: none;
-    background: #e01f3d;
-    -webkit-transition: 0.5s all;
-    -o-transition: 0.5s all;
-    -moz-transition: 0.5s all;
-    -ms-transition: 0.5s all;
-    transition: 0.5s all;
+	width: 100%;
+	margin-top: 0px;
+	padding: 12px 0px;
+	font-size: 15px;
+	color: #fff;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	border: none;
+	background: #647C90;
+	-webkit-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-ms-transition: 0.5s all;
+	transition: 0.5s all;
 }
 .banner-form-agileinfo input[type="submit"]:hover {
     background: #23B684;
 }
+.agileinfo {
+	position: absolute;
+	z-index: 2;
+	top: 20rem;
+	right: 6rem;
+}
 .banner-form-agileinfo {
-    background: #fff;
-    background: rgba(0, 0, 0, 0.54);
-    padding: 3em 2em;
+	background: #fff;
+	background: rgba(0, 0, 0, 0.54);
+	padding: 3em 2em;
 }
 .form-control {
     height: 40px;
@@ -1056,21 +1063,21 @@ section.slider {
     padding: 6em 0;
 }
 .readmore-w3 a {
-    border: 1px solid #e01f3d;
-    background: #e01f3d;
-    text-transform: capitalize;
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-    font-size: 15px;
-    padding: 10px 25px;
-    margin: 1em 0 0;
-    letter-spacing: 1px;
-    transition: 0.5s all;
-    -webkit-transition: 0.5s all;
-    -moz-transition: 0.5s all;
-    -o-transition: 0.5s all;
-    -ms-transition: 0.5s all;
+	border: 1px solid #647C90;
+	background: #647C90;
+	text-transform: capitalize;
+	display: inline-block;
+	text-decoration: none;
+	color: #fff;
+	font-size: 15px;
+	padding: 10px 25px;
+	margin: 1em 0 0;
+	letter-spacing: 1px;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	-ms-transition: 0.5s all;
 }
 .readmore-w3 a:hover{
     border: 1px solid #23B684;
@@ -1214,9 +1221,9 @@ section.slider {
 	color:#b5b5b5;
 	text-decoration:none;
 }
-.w3-address-right p a:hover{
-	color:#e01f3d;
-}
+	.w3-address-right p a:hover {
+		color: #647C90;
+	}
 .w3-address-right p span{
 	display:block;
 	margin:.5em 0;
@@ -1351,20 +1358,20 @@ section.slider {
   transform: translate3d(-50%,-50%,0) rotate(90deg) scale3d(0,0,1);
 }
 
-.hovereffect h6, .hovereffect hr {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
-  -webkit-transform: translate3d(-50%,-50%,0);
-  transform: translate3d(-50%,-50%,0);
-  -webkit-transform-origin: 50%;
-  -ms-transform-origin: 50%;
-  transform-origin: 50%;
-  background-color: rgba(224, 31, 61, 0.5);
-  margin: 0px;
-}
+	.hovereffect h6, .hovereffect hr {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+		transition: opacity 0.35s, transform 0.35s;
+		-webkit-transform: translate3d(-50%,-50%,0);
+		transform: translate3d(-50%,-50%,0);
+		-webkit-transform-origin: 50%;
+		-ms-transform-origin: 50%;
+		transform-origin: 50%;
+		background-color: #647C90;
+		margin: 0px;
+	}
 
 .group1, .group2 {
   left: 50%;
@@ -1495,6 +1502,7 @@ section.slider {
 	background: url(../images/arrow.png) no-repeat 0px 0px;
 }
 #toTopHover {
+	color:#647C90;
 	width: 40px;
 	height: 40px;
 	display: block;
@@ -1565,16 +1573,16 @@ ul.icon li {
 .Servicebottomtext {
     padding-right: 12em;
 }
-.Servicebottomtext  i.fa {
-    color: #ffffff;
-    background: #e01f3d;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-    margin-right: 1em;
-	margin-top: 1em;
-}
+	.Servicebottomtext i.fa {
+		color: #ffffff;
+		background: #647C90;
+		width: 50px;
+		height: 50px;
+		line-height: 50px;
+		text-align: center;
+		margin-right: 1em;
+		margin-top: 1em;
+	}
 .Servicebottomtext h4 {
     color: #eee;
     letter-spacing: 1px;
@@ -1603,15 +1611,15 @@ ul.icon li {
     -ms-transition: 0.5s all;
     -moz-transition: 0.5s all;
     cursor: pointer;
-} 
-.icon-box:hover {
-    background: #e01f3d;
-    transition: 0.5s all;
-    -webkit-transition: 0.5s all;
-    -o-transition: 0.5s all;
-    -ms-transition: 0.5s all;
-    -moz-transition: 0.5s all;
 }
+	.icon-box:hover {
+		background: #647C90;
+		transition: 0.5s all;
+		-webkit-transition: 0.5s all;
+		-o-transition: 0.5s all;
+		-ms-transition: 0.5s all;
+		-moz-transition: 0.5s all;
+	}
 .icon-box:hover i.fa {
 	color:#fff !important;
 }
@@ -2110,14 +2118,14 @@ h4.white-w3ls {
     height: 8em;
 }
 .contact-form input[type="submit"] {
-    border: none;
-    padding: 0.7em 2.5em;
-    font-size: 15px;
-    outline: none;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    background: #e01f3d;
-    color: #fff;
+	border: none;
+	padding: 0.7em 2.5em;
+	font-size: 15px;
+	outline: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	background: #647C90;
+	color: #fff;
 }
 .contact-form input[type="submit"]:hover {
     background: #23b684;
@@ -2833,9 +2841,9 @@ img.zoom-img:hover,.portfolio-grids:hover img.zoom-img{
 	.navbar-default .navbar-toggle .icon-bar {
 		background-color: #fff;
 	}
-	.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-		background-color: #e01f3d;
-	}
+		.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+			background-color: #647C90;
+		}
 	.top-nav-text {
 		width: 30%;
 		margin-left: 0em;
@@ -3232,6 +3240,10 @@ img.zoom-img:hover,.portfolio-grids:hover img.zoom-img{
 	}
 	.client h5 {
 		font-size: 16px;
+	}
+	.agileinfo {
+		height:10px;
+		font-size:xx-small;
 	}
 	.agileits_w3layouts_about_counter_left {
 		width: 100%;

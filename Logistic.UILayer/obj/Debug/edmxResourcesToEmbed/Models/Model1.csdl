@@ -40,6 +40,7 @@
     <EntitySet Name="TblMessage" EntityType="DBLogisticModel.TblMessage" />
     <EntitySet Name="TblMap" EntityType="DBLogisticModel.TblMap" />
     <EntitySet Name="TblTestimonial" EntityType="DBLogisticModel.TblTestimonial" />
+    <EntitySet Name="TblEmployee" EntityType="DBLogisticModel.TblEmployee" />
   </EntityContainer>
   <EntityType Name="TblCity">
     <Key>
@@ -130,5 +131,13 @@
     <Property Name="NameSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Image" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
     <Property Name="TestimonialContent" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblEmployee">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeNameSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeImage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>

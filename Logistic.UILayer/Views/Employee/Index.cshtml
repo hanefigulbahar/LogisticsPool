@@ -1,0 +1,32 @@
+﻿@model List<Logistic.UILayer.Models.TblEmployee>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/NewAdminLayout.cshtml";
+    int sayac = 0;
+}
+
+<h2>Employee</h2>
+
+<br />
+<table class="table table-bordered ">
+    <tr>
+        <th style="text-align: center;">#</th>
+        <th style="text-align: center;">Name Surname</th>
+        <th style="text-align: center;">Image</th>
+        <th style="text-align: center;">Delete</th>
+        <th style="text-align: center;">Update</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        sayac = sayac + 1;
+        <tr class="flex content-top-1">
+            <td style="text-align: center;">@sayac</td>
+            <td style="text-align: center;">@item.EmployeeNameSurname</td>
+            <td style="text-align: center;"><img src="@item.EmployeeImage" style="width:100px; height:100px; border-radius:20%;" /></td>
+            <td style="text-align: center;"><a href="/Employee/DeleteEmployee/@item.EmployeeID" class="btn btn-danger">Delete</a></td>
+            <td style="text-align: center;"><a href="/Employee/UpdateEmployee/@item.EmployeeID" class="btn btn-success">Update</a></td>
+        </tr>
+    }
+
+</table>
+<a href="/Employee/AddEmployee" class="btn btn-info">Add New Customer</a>

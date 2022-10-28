@@ -1,0 +1,17 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+@Html.Action("PartialHead")
+<body>
+    @{Html.RenderAction("PartialHeader", "Default");}
+    @{Html.RenderAction("PartialModal", "Default");}
+    @Html.Action("PartialBanner")
+    @Html.Action("PartialPortfolio")
+    @Html.Action("PartialScript")
+</body>
+</html>

@@ -16,7 +16,7 @@ namespace Logistic.UILayer.Controllers
             
             ViewBag.v1 = db.TblCategory.Count();
             ViewBag.v2 = db.TblCustomer.Count();
-            ViewBag.v3 = db.TblCategory.Where(x => x.CategoryID == 1).Select(y => y.CategoryName).FirstOrDefault();
+            ViewBag.v3 = db.TblCategory.Where(x => x.CategoryID == 2).Select(y => y.CategoryName).FirstOrDefault();
             ViewBag.v4 = db.TblCategory.Where(x => x.CategoryStatus == true).Count();
             return View();
         }

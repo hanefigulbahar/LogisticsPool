@@ -26,6 +26,14 @@
     <Property Name="CustomerMail" Type="nvarchar" MaxLength="50" />
     <Property Name="CustomerPassword" Type="nvarchar" MaxLength="20" />
   </EntityType>
+  <EntityType Name="TblEmployee">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeNameSurname" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmployeeImage" Type="nvarchar(max)" />
+  </EntityType>
   <EntityType Name="TblMap">
     <Key>
       <PropertyRef Name="MapID" />
@@ -108,6 +116,7 @@
     <EntitySet Name="TblCategory" EntityType="Self.TblCategory" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblCity" EntityType="Self.TblCity" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblCustomer" EntityType="Self.TblCustomer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblEmployee" EntityType="Self.TblEmployee" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblMap" EntityType="Self.TblMap" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblMessage" EntityType="Self.TblMessage" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblOrder" EntityType="Self.TblOrder" Schema="dbo" store:Type="Tables" />

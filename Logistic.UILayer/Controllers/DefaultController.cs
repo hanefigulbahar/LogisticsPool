@@ -31,6 +31,12 @@ namespace Logistic.UILayer.Controllers
             return PartialView();
         }
 
+        public PartialViewResult PartialTransport()
+        {
+            var values = db.TblCity.ToList();
+            return PartialView(values);
+        }
+
         public PartialViewResult PartialTestimonial()
         {
             var values = db.TblTestimonial.ToList();
@@ -44,6 +50,27 @@ namespace Logistic.UILayer.Controllers
             ViewBag.v3 = db.TblOrder.Count();
             ViewBag.v4 = db.TblCustomer.Count();
 
+            return PartialView();
+        }
+        public PartialViewResult PartialModal()
+        {
+            return PartialView();
+        }
+        public PartialViewResult PartialBanner()
+        {
+            return PartialView();
+        }
+        public PartialViewResult PartialTeam()
+        {
+            var values=db.TblEmployee.ToList();
+            return PartialView(values);
+        }
+        public PartialViewResult PartialBlog()
+        {
+            return PartialView();
+        }
+        public PartialViewResult PartialFooter()
+        {
             return PartialView();
         }
 

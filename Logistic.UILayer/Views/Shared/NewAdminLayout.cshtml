@@ -5,7 +5,8 @@
 
 <!DOCTYPE HTML>
 <html>
-@Html.Partial("/Views/Admin/PartialHead.cshtml")
+
+@{ Html.RenderAction("PartialHead", "Admin");}
 <body>
     <div class="page-container">
         <!--/content-inner-->

@@ -20,15 +20,7 @@ namespace Logistic.UILayer.Controllers
             return View(values);
 
         }
-        [HttpGet]
-        public ActionResult UpdateCustomer()
-        {
-            var mail = Session["CustomerMail"].ToString();
-            var id = db.TblCustomer.Where(x => x.CustomerMail == mail).Select(y=>y.CustomerID).FirstOrDefault();
-            var values = db.TblCustomer.Find(id);
-            return View(values);
-        }
-
+        
         [HttpPost]
         public ActionResult UpdateProfile(TblCustomer p)
         {

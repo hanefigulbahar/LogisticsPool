@@ -32,7 +32,7 @@ img{max-width:100%;}
 body {
 	font-family: 'Poppins', sans-serif;
 	font-size: 100%;
-	background-color:green;
+	background-color: #868B8E;
 }
 
 a {
@@ -109,6 +109,23 @@ h1 {
     background: url(../images/man.png) no-repeat;
     margin: 10px 4% 10px 0;
 	width: 5%;
+}
+
+.phone {
+	float: right;
+	height: 16px;
+	background: url(../images/phone1.png) no-repeat;
+	margin: 10px 4% 10px 0;
+	width: 5%;
+	opacity:50%;
+}
+.mail {
+	float: right;
+	height: 16px;
+	background: url(../images/mail.png) no-repeat;
+	margin: 10px 4% 10px 0;
+	width: 5.5%;
+	opacity: 70%;
 }
 .pass{
 	float:right;
@@ -193,15 +210,15 @@ span.checkbox1 {
     margin-top: 0.65em;
 }
 .login input[type="submit"] {
-  font-size: 0.9em;
-  color: #fff;
-  border: none;
-  padding:7px 20px 7px 20px;
-  outline: none;
-  margin-top: 1em;
-  border-radius: 4px;
-  cursor: pointer;
-  background:#BA3868;
+	font-size: 0.9em;
+	color: #fff;
+	border: none;
+	padding: 7px 20px 7px 20px;
+	outline: none;
+	margin-top: 1em;
+	border-radius: 4px;
+	cursor: pointer;
+	background: #647C90;
 }
 	.login input[type="submit"]:hover {
 		background: #746C70;
